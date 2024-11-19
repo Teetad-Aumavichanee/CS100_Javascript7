@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Define your own word of what to choose -->
-    <h1>Choose a ????A????</h1>
+    <h1>Choose a Thing</h1>
     <select id="dropdown">
         <option value="">Select one</option>
     </select>
@@ -20,15 +20,15 @@
     <div id="output"></div>
 
     <!-- Internal JavaScript block starts here -->
-    ????B????
+    <script>
         // Function to load options from the text file
         function loadOptions() {
             // Fetch data from a txt file
-            fetch(????C????)
+            fetch(option.txt)
                 .then(response => response.text())
                 .then(data => {
                     // Get reference to the dropdown menu element
-                    const dropdown = ????D????
+                    const dropdown = document.dropdown
                     const options = data.split('\n').map(option => option.trim()).filter(option => option !== '');
 
                     options.forEach(option => {
